@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trigger Clicked</title>
+	<!-- Added link to the jQuery Library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Click to pizza</h1>
+	<h3 id="mushroom">mushroom</h3>
+	<h3 id="garlic">garlic</h3>
+	<h3 id="spinach">spinach</h3>
+  <h4><p>pepperoni, mozarella, spinach, sundried tomatoes, <p>hamburger
+  pineapple, goat cheese, italian sausage, jalapenos,</p> canadian bacon
+  Green peppers, bbq chicken, mushrooms, anchovy, onions
+  green olives black olives, ham, leeks</p></h4>
+	<div id="image-div"></div>
+	<script type="text/javascript">
+    // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
+    // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
+    // It's useful to become familiar with now.
+    $(document).ready(function() {
+    // VARIABLES
+    // ====================================================================
+      // Here we create variables for tracking the number of sandwiches eaten
+      var mushroomCounter = 0;
+      var garlicCounter = 0;
+      var spinachCounter = 0;
+      // FUNCTIONS
+      
+      $("#mushroom").on("click", function() {
+        alert("Mmm... that shroom taste good!");
+        mushroomCounter++;
+        alert("You've eaten " + mushroomCounter + " pizza");
+      
+        $("#image-div").html("<img id='garlic' src='http://4.bp.blogspot.com/_dDkeofkiH5I/TNNzFY8R_JI/AAAAAAAAENM/KmdLG83GRaU/s1600/MushroomSpinachPizza-8.jpg'/>");
+      });
+      $("#garlic").on("click", function() {
+        alert(" my breath is going to be funky!");
+        garlicCounter++;
+        alert("You've eaten " + garlicCounter + " yum yum!");
+        
+        
+        $("#image-div").html("<img id='Grilled Cheese' src='https://www.cottageinn.com/wp-content/uploads/2014/07/GarlicCheeseBread_sm1.png' />");
+      });
+      $("#spinach").on("click", function() {
+        alert("oooweee.");
+        spinachCounter++;
+        alert("You've eaten " + spinachCounter + " spinach");
+      
+        $("#image-div").html("<img id='spinach' src='http://1.bp.blogspot.com/_mtq5ONUpmQk/TSyG4CZmDjI/AAAAAAAAA4A/1y9OF56nP8U/s1600/pizza8.jpg' />");
+      });
+    });
+  </script>
+  </body>
+  </html>
